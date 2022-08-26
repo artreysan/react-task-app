@@ -1,9 +1,8 @@
 
-//Add task from form
 
-import TaskList from './TaskList'
-import TaskForm from './TaskForm'
-import {tasks as data } from './tasks.js'
+import TaskList from './components/TaskList'
+import TaskForm from './components/TaskForm'
+import {tasks as data } from './data/tasks.js'
 import { useEffect, useState } from 'react'
 
 function App() {

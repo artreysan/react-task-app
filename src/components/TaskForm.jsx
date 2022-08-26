@@ -18,10 +18,11 @@ function TaskForm({createTask}) {
                 placeholder='Escribir una tarea' 
                 onChange={ (e) => {setTitle(e.target.value)
                 }}/>
-            <input 
+            <textarea 
                 placeholder='Escribir una descripcion' 
                 onChange={ (e) => {setDescription(e.target.value)
-                }}/> 
+                }}></textarea>
+                
             <button>Guardar</button>
         </form>
     </div>

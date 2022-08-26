@@ -1,4 +1,4 @@
-
+import TaskCard from "./TaskCard"
 function TaskList({tareas}) {
     if(tareas.length === 0){
       return <h1>No hay tareas</h1>
@@ -8,10 +8,7 @@ function TaskList({tareas}) {
       <div>
         {
             tareas.map((tarea)=> (
-                <div key={tarea.id}>
-                  <h1>{tarea.title}</h1>
-                  <p>{tarea.description}</p>
-                </div>
+                <TaskCard key={tarea.id} tarea={tarea} /> 
             )
             )
         }
