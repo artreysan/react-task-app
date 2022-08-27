@@ -2,7 +2,7 @@
 
 import TaskList from './components/TaskList'
 import TaskForm from './components/TaskForm'
-import {tasks as data } from './data/tasks.js'
+import {tasks as data, tasks } from './data/tasks.js'
 import { useEffect, useState } from 'react'
 
 function App() {
@@ -19,13 +19,16 @@ function App() {
       title:title,
       description:description
     }])
-
   }
-
+  
+  function deleteTask(taskID){
+    setTask(tareas.filter(tarea => tarea.id !== taskID))
+  
+  }
   return (
     <>
       <TaskForm createTask={createTask}></TaskForm> 
-      <TaskList tareas={tareas}/>
+      <TaskList deleteTask={deleteTask} tareas={tareas}/>
     </>
   )
 }
