@@ -27,7 +27,6 @@ export function TaskContextProvider(props) {
     setTask(tareas.filter(tarea => tarea.id !== taskID))
   }
   
-  
   //222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
   return (
     <TaskContext.Provider value={{
