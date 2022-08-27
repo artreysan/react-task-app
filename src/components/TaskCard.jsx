@@ -3,10 +3,11 @@ import {TaskContext} from '../context/TaskContext'
 //Importamos la libreria para usar el contexto creado
 import {useContext} from 'react'
 
-function TaskCard({tarea,deleteTask}) {
+// Quitamos promesas
+function TaskCard({tarea}) {
 
   //Indicamos que usaremos el contexto
-  const valor = useContext(TaskContext)
+  const {deleteTask}= useContext(TaskContext)
 
   return (
       <div>
